@@ -11,18 +11,16 @@ class App extends Component {
     }
   }
 
-  foodArr(){
+  render() {
     var food = this.state.foodList.map((e,i)=>{
-      return key=[i];
+      return(
+        <h2 key={i}>{e}</h2>
+      )
     })
 
-    this.setState(this.state.foodList:food)
-  }
-
-  render() {
     return (
       <div className="App">
-        <h2>{this.state.foodList}</h2>
+        {food}
       </div>
     );
   }
